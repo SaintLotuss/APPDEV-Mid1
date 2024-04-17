@@ -34,22 +34,18 @@ container.on('mouseleave', e => {
     card.style.transform = `rotateY(0deg) rotateX(0deg)`;
 });
 
-/* This code snippet demonstrates a 3D card animation effect using jQuery. The animation involves rotating a card element based on the mouse movement within a container. 
-Additionally, it includes pop-out animations for various elements when the mouse enters the container.
+/* 
+Grabs elements (Setup): In order to make manipulation easier later, this step uses jQuery to locate certain items on your webpage and stores them in variables.
 
-The first step is to select the card and container elements from the HTML content with jQuery's selector function.
+Moves card on hover: In this step, the card rotates in response to mouse movements made inside the container. It feels like a conductor's hand is guiding the card as your mouse moves.
+The card tilts further in that direction the closer your mouse is to the container's edge. 
 
-In the second step, add an event listener for when the mouse moves over the container element.
-This will invoke a method that decides how much to rotate the card based on the mouse position on the page.
+Removes animation on leave:When you move your mouse away from the container, this step returns the card's rotation to its initial position, meaning it does not rotate at all.
+Additionally, it creates a visually pleasing transition by adding a seamless transition effect similar to a stage curtain closing.
 
-In step three, we add another event listener to detect when the mouse exits (or "leaves") the container element.
-This activates a code that returns any rotation performed in step two to its original spot.
+Adds animation on enter:When you hover over the container after completing this step, the card elements inside will stand out.
+It gives different card pieces a translation effect that looks like three dimensions.
 
-Step four adds motion to our card by changing the CSS properties of individual components as we hover over them with our cursor.
-These changes create a pop-out effect for these elements.
-
-Finally, in step five, we select all of the components that require animation and assign them variables that can be modified later in the code.
-The code aims to create a 3D card animation effect on a webpage by rotating and moving the card in response to the user's mouse movements.
-When the user hovers over the card, it emerges; when they move away, it returns to its original position.
-
+Final step, This stage, which is sometimes omitted from the original description, concentrates on choosing particular components inside the card. 
+References to things like headings, photos, titles, social media icons, and maybe profile data are retrieved. These are probably the elements that step 4's pop-out animation will apply to.
 */
